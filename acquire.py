@@ -51,12 +51,8 @@ def get_zillow_data():
     ON predictions_2017.parcelid = properties_2017.parcelid 
     AND predictions_2017.transactiondate BETWEEN '2017-05-01' AND '2017-08-31'
     '''
-    ##If the file already exists we will simply pull the file.
-    if os.path.isfile(filename):
-        return pd.read_csv(filename)
-    else:
-        df = pd.read_sql(sql, get_connection('zillow'))
-        return df
+    df = pd.read_sql(sql, get_connection('zillow'))
+    return df
 
 
 #Now we will replace the null values with the mean value of each column
