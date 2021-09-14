@@ -154,7 +154,7 @@
  
  - Evaluate the model using standard techniques. Compute the evaluation metrics, compare models to baseline, etcetera. 
  
-## Reproduct my project 
+## Reproduce my project 
 To reproduct my project, you will need your own `env.py` file with database credentials, in addition to the files listed below: 
  - Read this `READ.md` file.
  - Download the `acquire.py`, `prep.py` and `Final_Project.ipynb` files. 

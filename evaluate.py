@@ -78,7 +78,7 @@ def better_than_baseline(y, yhat):
     rmse_model = rmse(y, yhat)
 
     if rmse_model < rmse_baseline:
-        print("The mode performs better than baseline.")
+        print("The model performs better than baseline.")
     elif rmse_model == rmse_baseline:
         print("The model performs equal to baseline.")
     elif rmse_model > rmse_baseline:
