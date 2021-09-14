@@ -34,6 +34,14 @@
 | bedroomcnt_scaled                   | float64   | Bedroom count, scaled so that all values are between 0 and 1   |
 | bathroomcnt_scaled                  | float64   | Bathroom count, scaled so that all values are betwween 0 and 1 |
 
+
+Later on, we will also create a new variables `tax_rate`. 
+
+| Feature   | Datatype   | Definition                                     |
+|:----------|:-----------|:-----------------------------------------------|
+| tax_rate  | float64    | tax amount divided by the tax value of a home. |
+
+
 ## Initial Hypotheses
 
 ### Hypothesis 1 

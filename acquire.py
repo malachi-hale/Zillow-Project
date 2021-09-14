@@ -28,9 +28,21 @@ def get_connection(db, user=env.user, host=env.host, password=env.password):
 def get_zillow_data():
     '''
     We will read a SQL query and create a file based on this query. I have also included a line to eliminate duplicate columns because value_counts() does not work if there are duplicate columns in the DataFrame.
+    Our SQL query obtain single-unit homes with a transaction date within 1 May 2017 and 31 August 2017.
     '''
     filename = "zillow.csv"
-    ##We will write a SQL query to obtain the data
+    ##We define single-unit homes as follows-
+    ##261 = Single Family Resident Properties 
+    ##262 = Rural residence
+    ##263 = Mobile Home
+    ##264 = Townhouse
+    ##265 = Cluster Home
+    ##266 = Condominium
+    ##268 = Row House
+    ##273 = Bungalow 
+    ##275 = Manufactured, modular, prefabricated homes
+    ##276 = Patio home
+    ## 297 = Infered Single Family Residential
     sql = ''' 
     SELECT bedroomcnt, bathroomcnt, calculatedfinishedsquarefeet,
          taxvaluedollarcnt, yearbuilt, taxamount, fips from properties_2017
